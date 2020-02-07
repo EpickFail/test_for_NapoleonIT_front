@@ -2,9 +2,7 @@ input {
   height: 25px;
   width: 250px;
 }
-.message {
-  height: 75px;
-}
+
 .p_btn {
   position: relative;
   top: 8px;
@@ -57,39 +55,7 @@ input {
   width: 60%;
   height: 450px;
 }
-#thx {
-  position: absolute;
-  display: none;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 50%;
-  height: 40%;
-  background: #FFF;
-  border-radius: 15px;
-}
-#ok {
-  width: 200px;
-  height: 35px;
-  border-radius: 5px;
-  background: #4CAF50;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  position: relative;
-  text-align: center;
-  top: 15%;
-}
-#ok:hover {
-  cursor: pointer;
-  background: #4caf5063;
-}
-#h1, #h2{
-  display: none;
-}
+
 #secret{
   display: none;
   width: 200px;
