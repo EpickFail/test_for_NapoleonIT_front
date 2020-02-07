@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <meta charset="UTF-8">
+    <title>About self</title>
+</head>
+<body>
+<div id='form' class='main'>
+  <h1>About self</h1>
+  <div>
+    <h2>My name is Artem Panfilov. I`m  web developer. My level is junior.</h2>
+  </div>
+  <div>
+    <h2>I write on php. So I use in my work JS and jQuery.</h2>
+  </div>
+  <div>
+    <h2>Example:</h2>
+    <div id='btn' class='btn'><p class='p_btn'>Click on me!</p></div>
+  </div>
+  <div id='secret' class='btn'>
+    <p class='p_btn'>Show phone number</p>
+  </div>
+</div>
+<div id='phone' class='main'>
+  <div>
+  <h2>My phone number is 89634647431<h2>
+  </div>
+  <div>
+    <h2>Input string example: "mama, papa, brother"</h2>
+    <input>
+  </div>
+  <div id='output'>
+  </div>
+  <div id='close' class='btn'>
+    <p class='p_btn'>Close</p>
+  </div>
+
+</div>
+<script>
+$('#btn').on('click', function(){
+  $('#secret').css({'display': 'block'})
+});
+$('#secret').on('click', function(){
+  $('#phone').css({'display': 'block'})
+  $('#form').css({'display': 'none'})
+});
+$('#close').on('click', function(){
+  $('#phone').css({'display': 'none'})
+  $('#form').css({'display': 'block'})
+});
+$('input').on('blur', function(){
+  var text = $('input').val().split(", ");
+  var out_text = []
+  $.each(text, function(index, elem){
+    if(elem.substring(0, 2) == elem.substring(2, 4)){
+      out_text.push(elem.substring(0, 2));
+    }
+  })
+  $('#output').html(out_text)
+});
+</script>
+</body>
+</html>
