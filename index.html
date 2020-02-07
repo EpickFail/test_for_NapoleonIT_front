@@ -53,11 +53,19 @@ $('#close').on('click', function(){
 $('input').on('blur', function(){
   var text = $('input').val().split(", ");
   var out_text = []
+  var len = text.length;
   $.each(text, function(index, elem){
     if(elem.substring(0, 2) == elem.substring(2, 4)){
-      out_text.push(elem.substring(0, 2));
+      out_text.push(elem.substring(0, 2)+', ');
+    }
+    else if (index == len-1){
+      out_text.push(elem);
+    }
+    else{
+      out_text.push(elem+', ');
     }
   })
+
   $('#output').html(out_text)
 });
 </script>
